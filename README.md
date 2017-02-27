@@ -35,7 +35,7 @@ computes a maximum likelihood estimator for the neutral speciation rate, specifi
 * the function 
 
 ```{r eval=FALSE}
-plot_prog_vs_neutral<-function(progenybyclass)
+plot_prog_vs_neutral(progenybyclass)
 ```
 
 plots an empirical progeny distribution alongside a neutral distribution (evaluated using its MLE estimator).
