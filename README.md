@@ -27,13 +27,15 @@ will evaluate numerically our expression for the neutral progeny distribution, i
 
 * the function 
 
-```nu_MLE(progenybyclass)
+```{r eval=FALSE}
+nu_MLE(progenybyclass)
 ```
 computes a maximum likelihood estimator for the neutral speciation rate, specifically the combination of parameters 1-b/d. We assume that the progeny distribution is given in the form of a two column matrix, where the first column is a vector of total progeny, and the second is a vector of numbers of species with the number of progeny in the first column
 
 * the function 
 
-```plot_prog_vs_neutral<-function(progenybyclass)
+```{r eval=FALSE}
+plot_prog_vs_neutral<-function(progenybyclass)
 ```
 
 plots an empirical progeny distribution alongside a neutral distribution (evaluated using its MLE estimator).
