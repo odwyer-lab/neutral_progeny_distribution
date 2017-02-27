@@ -42,4 +42,5 @@ pushViewport(vps$figure)
 vp1 <-plotViewport(c(0,0,0,0.5))
 print(progplot,vp=vp1)                    
 popViewport()
+  return(neutral_nzs_cumulative_prog)
 }
