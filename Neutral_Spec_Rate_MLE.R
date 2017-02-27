@@ -1,9 +1,10 @@
-library(hypergeo)
-library(grid)
-library(gridBase)
-library(ggplot2)
-library(plyr)
-library(reshape)
+packages <- c("hypergeo", "grid", "gridBase", "ggplot2", "plyr", "reshape")
+for (i in packages){
+  if(!require(i, character.only = T)){
+    install.packages(i, dependencies = T)
+    require(i, character.only = T)
+  }
+}
 cumulasym<-function(b,d,K, thresh=1){
   cumul<-Re(exp((-1 + 2*K)*log(2)-log(b)+K*log(b*d)+(1-2*K)*log(b + d)+lchoose(1/2,K)+log(hypergeo(1,K-1/2,1+K,4*b*d/(b+d)^2))-((-1 + 2*thresh)*log(2)-log(b)+thresh*log(b*d)+(1-2*thresh)*log(b + d)+lchoose(1/2,thresh)+log(hypergeo(1,thresh-1/2,1+thresh,4*b*d/(b+d)^2)))))
   return(cumul)
