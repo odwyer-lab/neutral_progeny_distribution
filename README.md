@@ -47,7 +47,7 @@ progenybyclass<-read.csv("example_progeny_dbn_1.csv")
 ```
 or
 ```{r eval=FALSE}
-progenybyclass<-read.csv("example_progeny_dbn_1.csv")
+progenybyclass<-read.csv("example_progeny_dbn_2.csv")
 ```
 and use the resulting data to compute ML estimates or plot data using the functions above.
 
