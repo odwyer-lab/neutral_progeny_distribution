@@ -23,7 +23,7 @@ In this code we introduce three R functions which can be used to reproduce calcu
 cumulasym(b,d,K,thresh)
 ```
 
-will evaluate numerically our expression for the neutral progeny distribution, in the form of a cumulative distribution. The output is the expected fraction of variants with greater than or equal to K individuals. This requires specifying a birth rate, an effective mortality rate, and a value of K. Note that the expression actually only depends on the ratio of birth to mortality rate. We have an argument "thresh" which is by default = 1, but will allow us to plot the distribution assuming that all variants with fewer than thresh individuals are dropped from the data.
+will evaluate numerically our expression for the neutral progeny distribution, in the form of a cumulative distribution. The output is the expected fraction of variants with greater than or equal to K individuals. This requires specifying a birth rate, an effective mortality rate, and a value of K, which refers to number of individuals. Note that the expression actually only depends on the ratio of birth to mortality rate. We have an argument "thresh" which is by default = 1, but will allow us to plot the distribution assuming that all variants with fewer than thresh individuals are dropped from the data.
 
 * the function 
 
