@@ -16,7 +16,7 @@ nu_MLE<-function(progenybyclass){
  return(1-((sum(progenybyclass[,1])-sum(progenybyclass[,2]))/sum(progenybyclass[,1])))
 }
 
-plot_prog_vs_neutral<-function(progenybyclass){
+plot_prog_vs_neutral<-function(progenybyclass,returnneutral=TRUE){
   #assume that the progeny distribution is given in the form of a two column matrix, where the first column is a vector of total progeny, and the second is a vector of numbers of species with the number of progeny in the first column
   # this computes a maximum likelihood estimator for the combination of neutral parameters 1-b/d, and then plots the data alongside a neutral progeny dbn with the MLE estimate
 colorprog<-c("black","dark gray")
@@ -42,5 +42,8 @@ pushViewport(vps$figure)
 vp1 <-plotViewport(c(0,0,0,0.5))
 print(progplot,vp=vp1)                    
 popViewport()
+  # return neutral progeny dbn if option selected
+  if(returnneutral){
   return(neutral_nzs_cumulative_prog)
+   }
 }
