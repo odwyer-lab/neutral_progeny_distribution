@@ -13,7 +13,7 @@ nu_MLE<-function(progenybyclass){
   #assume that the progeny distribution is given in the form of a two column matrix, where the first column is a vector of total progeny, and the second is a vector of numbers of species with the number of progeny in the first column
   # this returns a maximum likelihood estimator for the combination of neutral parameters 1-b/d
   names(progenybyclass)<-c("births","species")
- return(1-((sum(progenybyclass[,1])-sum(progenybyclass[,2]))/sum(progenybyclass[,1])))
+ return(1-((sum(progenybyclass[,1]*progenybyclass[,2])-sum(progenybyclass[,2]))/sum(progenybyclass[,1]*progenybyclass[,2])))
 }
 
 plot_prog_vs_neutral<-function(progenybyclass,returnneutral=TRUE){
